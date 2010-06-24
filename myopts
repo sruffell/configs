@@ -1,0 +1,13 @@
+# This is a screen file that I use to setup my system for dahdi work.
+escape ^Bb
+screen -t terminal
+register a "cd /home/sruffell/dahdi-linux^M"
+paste a
+split
+focus down
+screen -t watch
+resize 10
+register a "while true; do dmesg -c; sleep 1 ; done^M"
+paste a
+select 1
+focus top
