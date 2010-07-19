@@ -1,0 +1,18 @@
+[user]
+	email = sruffell@digium.com
+	name = Shaun Ruffell
+
+[sendemail]
+	smtpserver = zimbra.digium.com
+	smtpuser = sruffell
+	from = Shaun Ruffell <sruffell@digium.com>
+
+[format]
+	numbered = auto
+
+[core]
+	legacyheaders = false
+	editor = vim
+
+[repack]
+	usedeltabaseoffset = true
