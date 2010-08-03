@@ -2,6 +2,7 @@ set hidden
 map <F6> :bn
 map <F5> :bp
 map <F4> :set filetype=python
+map <F3> :setlocal spell spelllang=en_us
 set autoindent
 set backspace=indent,eol,start
 set fileencodings=utf-8,latin1
