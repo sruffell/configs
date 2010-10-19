@@ -16,3 +16,5 @@
 
 [repack]
 	usedeltabaseoffset = true
+[alias]
+	ll = log --pretty=oneline --abbrev-commit --decorate
