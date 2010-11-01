@@ -1,0 +1,22 @@
+set imap_user = "sruffell@sruffell.net"
+
+set smtp_url = "smtp://sruffell%40sruffell.net@smtp.gmail.com:587"
+set from = "sruffell@sruffell.net"
+set realname = "Shaun Ruffell"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+
+set header_cache=~/.mutt/sruffellcache/headers
+set message_cachedir=~/.mutt/sruffellcache/bodies
+set certificate_file=~/.mutt/certificates
+set move=no
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
