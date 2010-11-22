@@ -6,6 +6,12 @@
 	smtpserver = zimbra.digium.com
 	smtpuser = sruffell
 	from = Shaun Ruffell <sruffell@digium.com>
+	chainreplyto = false
+
+[imap]
+	folder = "INBOX/Drafts"
+	host = imap://zimbra.digium.com
+	user = sruffell
 
 [format]
 	numbered = auto
@@ -16,5 +22,6 @@
 
 [repack]
 	usedeltabaseoffset = true
+
 [alias]
-	ll = log --pretty=oneline --abbrev-commit --decorate
+	ll = log --color --pretty=oneline --abbrev-commit --decorate
