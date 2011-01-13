@@ -8,3 +8,8 @@ http://serverfault.com/questions/71285/in-centos-4-4-how-can-i-strip-escape-sequ
 
 Extracting the files from an RPM:
 rpm2cpio myrpmfile.rpm | cpio -idmv
+
+Replacing the git-svn-id from a branch and replacing it with  Origin (from
+tzafrir):
+
+git filter-branch -f --msg-filter "sed -e 's|^git-svn-id: http://svn.asterisk.org/[^@]*@\([0-9]\+\) .*|Origin: http://svnview.digium.com/svn/dahdi?view=rev\&rev=\1|'"
