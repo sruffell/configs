@@ -16,6 +16,8 @@ set sort = 'threads'
 set sort_aux = 'last-date-received'
 set imap_check_subscribed
 
+set editor=vim
+
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"

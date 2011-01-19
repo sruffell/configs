@@ -22,6 +22,7 @@ set viminfo='20,\"50
 set window=34
 set incsearch
 set nowrap
+set exrc
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 autocmd FileType python setlocal tags=tags ts=4 sw=4 nocindent expandtab
