@@ -22,3 +22,5 @@ ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
+
+alias asterisk-dev Asterisk Developers Mailing List <asterisk-dev@lists.digium.com>
