@@ -24,5 +24,7 @@ set incsearch
 set nowrap
 set exrc
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+
 autocmd FileType python setlocal tags=tags ts=4 sw=4 nocindent expandtab
+autocmd FileType c match OverLength /\%81v.\+/
+autocmd FileType c map g<C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
