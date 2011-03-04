@@ -3,6 +3,7 @@ set imap_user = "sruffell"
 set smtp_url = "smtp://sruffell@zimbra.digium.com"
 set from = "sruffell@digium.com"
 set realname = "Shaun Ruffell"
+set hostname = digium.com
 
 set folder = "imap://zimbra.digium.com:143"
 set spoolfile = "+INBOX"
@@ -15,6 +16,7 @@ set move=no
 set sort = 'threads'
 set sort_aux = 'last-date-received'
 set imap_check_subscribed
+set askbcc=yes
 
 set editor=vim
 
@@ -24,3 +26,4 @@ ignore "DKIM-Signature:"
 hdr_order Date From To Cc
 
 alias asterisk-dev Asterisk Developers Mailing List <asterisk-dev@lists.digium.com>
+alias asterisk-users Asterisk Users Mailing List - Non-Commercial Discussion <asterisk-users@lists.digium.com>
