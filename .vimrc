@@ -23,6 +23,7 @@ set window=34
 set incsearch
 set nowrap
 set exrc
+set background=dark
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 autocmd FileType python setlocal tags=tags ts=4 sw=4 nocindent expandtab
