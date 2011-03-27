@@ -25,3 +25,4 @@
 
 [alias]
 	ll = log --color --pretty=oneline --abbrev-commit --decorate
+	caa = commit -a --amend -C HEAD
