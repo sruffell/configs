@@ -1,0 +1,42 @@
+# screen script to setup my drcontroller screen session.
+caption always
+screen -t alpha-console
+register a "console alpha^M"
+paste a
+screen -t alpha-ssh
+screen -t bravo-console
+register a "console bravo^M"
+paste a
+screen -t bravo-ssh
+screen -t charlie-console
+register a "console charlie^M"
+paste a
+screen -t charlie-ssh
+screen -t delta-console
+register a "console delta^M"
+paste a
+screen -t delta-ssh
+screen -t echo-console
+register a "console echo^M"
+paste a
+screen -t echo-ssh
+screen -t foxtrot-console
+register a "console foxtrot^M"
+paste a
+screen -t foxtrot-ssh
+screen -t golf-console
+register a "console golf^M"
+paste a
+screen -t golf-ssh
+screen -t hotel-console
+register a "console hotel^M"
+paste a
+screen -t hotel-ssh
+screen -t india-console
+register a "console india^M"
+paste a
+screen -t india-ssh
+screen -t juliet-console
+register a "console juliet^M"
+paste a
+screen -t juliet-ssh
