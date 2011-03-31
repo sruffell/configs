@@ -13,3 +13,11 @@ Replacing the git-svn-id from a branch and replacing it with  Origin (from
 tzafrir):
 
 git filter-branch -f --msg-filter "sed -e 's|^git-svn-id: http://svn.asterisk.org/[^@]*@\([0-9]\+\) .*|Origin: http://svnview.digium.com/svn/dahdi?view=rev\&rev=\1|'"
+
+Sending a patch series to the mailing list:
+1. git checkout <branch which is ontop of master>
+2. mkdir temp; cd temp
+2. git format-patch --cover-letter <master>
+3. edit the 0000-cover-letter.patch file to describe the changes
+4. git send-email --suppress-cc=all --to=<mailing list> .
+5. cd ..; rm -f -r temp
