@@ -21,3 +21,10 @@ Sending a patch series to the mailing list:
 3. edit the 0000-cover-letter.patch file to describe the changes
 4. git send-email --suppress-cc=all --to=<mailing list> .
 5. cd ..; rm -f -r temp
+
+Adding acks onto a branch (from the git filter-branch man page):
+1. git checkout for-trunk (the branch you had reviewed)
+2. git checkout -b acked (temporary branch in case you mess things up)
+3. git filter-branch -f --msg-filter 'cat && echo "Acked-by: (copy name/email from acked by line here)"' master..acked
+4. (check the acked branch to make sure it looks good)
+5. git checkout for-trunk; git reset --hard acked; git branch -d acked (Don't need to keep the acked branch around anymore)
