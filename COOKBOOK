@@ -17,10 +17,10 @@ git filter-branch -f --msg-filter "sed -e 's|^git-svn-id: http://svn.asterisk.or
 Sending a patch series to the mailing list:
 1. git checkout <branch which is ontop of master>
 2. mkdir temp; cd temp
-2. git format-patch --cover-letter <master>
-3. edit the 0000-cover-letter.patch file to describe the changes
-4. git send-email --suppress-cc=all --to=<mailing list> .
-5. cd ..; rm -f -r temp
+3. git format-patch --cover-letter <master>
+4. edit the 0000-cover-letter.patch file to describe the changes
+5. git send-email --suppress-cc=all --to=<mailing list> .
+6. cd ..; rm -f -r temp
 
 Adding acks onto a branch (from the git filter-branch man page):
 1. git checkout for-trunk (the branch you had reviewed)
