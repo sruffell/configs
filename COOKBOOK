@@ -29,8 +29,10 @@ Adding acks onto a branch (from the git filter-branch man page):
 4. (check the acked branch to make sure it looks good)
 5. git checkout for-trunk; git reset --hard acked; git branch -d acked (Don't need to keep the acked branch around anymore)
 
-
 Looking at the commits that are only on the master branch and not in the 2.4 release:
 
 git log --oneline v2.4.0..master | sed -e 's/\w* //' > file.txt && git log --oneline v2.4.0..2.4 | sed -e 's/\w* //' >> file.txt && cat file.txt | sort | uniq -u | tee uniq.txt
+
+Changing a configuration option in all the gitolite subdirs:
+pushd .; for dir in `find repositories/ -name 'config' | sed -e "s/\/config//"`; do cd /home/git/$dir; git config receive.denyNonFastForwards false; git config receive.denyDeleteCurrent ignore; done; popd
 
