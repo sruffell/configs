@@ -23,6 +23,10 @@
 [repack]
 	usedeltabaseoffset = true
 
+[rerere]
+	autoupdate = yes
+	enabled = yes
+
 [alias]
 	ll = log --color --pretty=oneline --abbrev-commit --decorate
 	caa = commit -a --amend -C HEAD
