@@ -55,3 +55,12 @@ results:move_messages(account1['INBOX/lists/swdev'])
 -- Internal hardware development discussions
 results = account1.INBOX:contain_field('List-Id', 'hwdev')
 results:move_messages(account1['INBOX/lists/hwdev'])
+--
+-- JIRA emails sent to the swdev list
+results = account1.INBOX:contain_field('List-Id', 'asterisk-ss7')
+results:move_messages(account1['INBOX/lists/asterisk-ss7'])
+
+
+-- JIRA emails sent to the swdev list
+results = account1.INBOX:contain_field('List-Id', 'dahdi-commits.lists.digium.com')
+results:move_messages(account1['INBOX/lists/dahdi-commits'])
