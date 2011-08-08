@@ -1,4 +1,5 @@
 set imap_user = "sruffell"
+set imap_keepalive = 300
 
 set smtp_url = "smtp://sruffell@zimbra.digium.com"
 set from = "sruffell@digium.com"
@@ -16,14 +17,32 @@ set move=no
 set sort = 'threads'
 set sort_aux = 'last-date-received'
 set imap_check_subscribed
-set askbcc=yes
+set askbcc=no
+set alias_file=~/.mutt/aliases
+set sort_alias=alias
+set reverse_alias=yes
+set quit=ask-yes
+set status_on_top
+set pager_index_lines=6
+source $alias_file
+
+color header brightred default subject
+color hdrdefault red default
+color quoted brightblue default
+color status brightyellow blue 
+color indicator yellow red
 
 set editor=vim
 
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
+ignore "X-"
+ignore "X-Mailer"
+ignore "List-"
+ignore "Errors-"
+ignore "User-agent"
+
+my_hdr Bcc: Shaun Ruffell <sruffell@digium.com>
 hdr_order Date From To Cc
 
-alias asterisk-dev Asterisk Developers Mailing List <asterisk-dev@lists.digium.com>
-alias asterisk-users Asterisk Users Mailing List - Non-Commercial Discussion <asterisk-users@lists.digium.com>
