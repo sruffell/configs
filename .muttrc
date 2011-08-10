@@ -24,6 +24,7 @@ set reverse_alias=yes
 set quit=ask-yes
 set status_on_top
 set pager_index_lines=6
+set mark_old=no
 source $alias_file
 
 color header brightred default subject
