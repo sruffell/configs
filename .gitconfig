@@ -2,6 +2,22 @@
 	email = shaun.ruffell@starlab.io
 	name = Shaun Ruffell
 
+[alias]
+	tbd = for-each-ref --format '%(refname) %(taggerdate)' --sort=taggerdate refs/tags
+	ll = log --oneline --color --decorate
+	caa = commit -a --amend -C HEAD
+	as = rebase --autosquash -i
+	changed = ls-files -m --exclude-standard
+
+[branch]
+	autosetuprebase = always
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
 [format]
 	numbered = auto
 
@@ -16,6 +32,3 @@
 	autoupdate = yes
 	enabled = yes
 
-[alias]
-	ll = log --color --pretty=oneline --abbrev-commit --decorate
-	caa = commit -a --amend -C HEAD
