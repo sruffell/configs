@@ -1,17 +1,6 @@
 [user]
-	email = sruffell@digium.com
+	email = shaun.ruffell@starlab.io
 	name = Shaun Ruffell
-
-[sendemail]
-	smtpserver = zimbra.digium.com
-	smtpuser = sruffell
-	from = Shaun Ruffell <sruffell@digium.com>
-	chainreplyto = false
-
-[imap]
-	folder = "INBOX/Drafts"
-	host = imap://zimbra.digium.com
-	user = sruffell
 
 [format]
 	numbered = auto
